@@ -5,6 +5,8 @@ class Todo(models.Model):
     title = models.CharField("タスク名", max_length=30)
     description = models.TextField("詳細", blank=True)
     deadline = models.DateField("締切")
+    state = models.IntegerField("状態")
+    priority = models.IntegerField("優先度")
 
     def __str__(self):
         return self.title
